@@ -1,0 +1,4 @@
+﻿  day_1.c
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\day_1.c(20,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\day_1.c(20,9): message : consider using '%zd' in the format string
+  C_stu.vcxproj -> E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\x64\Debug\C_stu.exe
