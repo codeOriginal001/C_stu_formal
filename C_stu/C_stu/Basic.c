@@ -3,6 +3,7 @@
 // 执行快捷键：Ctrl + F5 执行、F10 逐步执行
 
 //extern int var; //生命需要使用外部变量
+//extern int Add(int, int); // 声明外部函数变量
 //func();//(调用函数)
 
 	   // 头文件调用
@@ -117,7 +118,7 @@ int main() // 数据类型 main()
 	scanf("%d%d", &number1, &number2);
 	result = Add(number1, number2);
 
-	printf("%d\n", sum);
+	printf("%d\n", result);
 
 	// 数组定义创建
 	int in1[10] = { 1,2,3,4,5,6,7,8,9,10 };
@@ -139,12 +140,75 @@ int main() // 数据类型 main()
 	i = 0;
 	while (i < 10)
 	{
-		printf("%d", in2[i]);
+		printf("%d\n", in2[i]);
 		i++;
 	}
 
+	// 计算数组所含元素个数：数组总大小/(第一个元素所占的)大小
+	int element_num = sizeof(in1);
+	int first_element = sizeof(in1[0]);
+	int result_elemnet_num = element_num / first_element;
+	printf("%d\n", result_elemnet_num);
+
+	// 判断两数组是否相等
+	char ch3[] = { "abcdef" };
+	char ch3_1[] = "abcdef";
+	char ch3_2[] = "abcdef";
+
+	if (strcmp(ch3, ch3_1) == 0)
+	{
+		printf("{ \"abcdef\" } 与 \"abcdef\" 相等\n "); // 相等
+	}
+	else
+	{
+		printf("{ \"abcdef\" } 与 \"abcdef\" 不相等\n ");
+	}
+
+	if (strcmp(ch3_1, ch3_2) == 0)
+	{
+		printf("相等\n"); // 相等
+	}
+	else
+	{
+		printf("不相等\n");
+	}
 
 
+	// 操作符前置++，后后置++
+	// 先++ 后使用
+	int ao1 = 0;
+	int bo1 = 0;
+	bo1 = ++ao1;
+	printf("前置：a = %d, b = %d \n", ao1, bo1); // a =1 b=1
+	printf("前置：a = %d\n", --ao1); // a = 0
+	printf("前置：a = %d\n", ao1); // a = 0
+	// 后置++ 先使用，再++
+	int ao2 = 0;
+	int bo2 = 0;
+	bo2 = ao2++;
+	printf("后置：a = %d, b = %d \n", ao2, bo2); // a = 1, b= 0
+	printf("后置：a = %d \n", ao2++); // a = 1
+	printf("后置：a = %d \n", ao2); // a = 2
+
+
+	//条件操作符
+	int m = 10;
+	int m_1 = 0;
+	int m_2 = 0;
+
+	(m > 5) ? (m_1 = 1) : (m_1 = -1);
+	m_2 = (m > 5 ? 1 : -1);
+
+	printf("%d %d %d\n", m, m_1, m_2);
+
+	// 逗号表达式：从左到右依次计算, 取最后一个结果
+	int a_m = 3;
+	int b_m = 5;
+	int c_m = 0;
+
+	int d_m = (a_m += 2, b_m = b_m - c_m + a_m, c_m = a_m + b_m); // a =  5, b = 10, c = =15
+
+	printf("%d\n", d_m); // 15
 
 
 	// 返回0正常返回, 与起始数据类型一致`
@@ -165,4 +229,11 @@ int main() // 数据类型 main()
 1. %d 10进制有符号的整数
 2. %s 字符串
 3. %c 字符
+4. %f 浮点数
+
+[操作符]
+1. /(除号)，左右两端至少要有一位是小数，否则执行的是整数除法
+2. 0表示假，非0表示真
+3. sizeof 是一个操作符，不是函数
+4. 两个字符串不能用 == 来判断是否相等，需要使用strcmp
 */
