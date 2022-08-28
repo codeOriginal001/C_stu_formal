@@ -1,10 +1,10 @@
 ﻿  Basic.c
-E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(42,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(42,9): message : consider using '%zd' in the format string
-E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(83,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(83,9): message : consider using '%zd' in the format string
-E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(84,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(84,9): message : consider using '%zd' in the format string
-E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(85,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(85,9): message : consider using '%zd' in the format string
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(63,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(63,9): message : consider using '%zd' in the format string
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(104,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(104,9): message : consider using '%zd' in the format string
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(105,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(105,9): message : consider using '%zd' in the format string
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(106,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\C_stu\Basic.c(106,9): message : consider using '%zd' in the format string
   C_stu.vcxproj -> E:\Code_System\C_Programming\Bit_S_hub\C_stu_formal\C_stu\x64\Debug\C_stu.exe

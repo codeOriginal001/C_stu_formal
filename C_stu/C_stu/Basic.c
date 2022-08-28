@@ -29,6 +29,27 @@ int Add(int x, int y)
 	return z;
 }
 
+//#define 定义创建宏
+#define Time(x, y) ((x)*(y)) // 函数相乘
+#define MAX_Return(x, y) ((x)>(y) ? (x):(y)) //返回较大数
+
+// 创建结构体类型
+struct Stu
+{
+	char name[20];
+	int age;
+	float score;
+};
+
+// 存放结构体变量地址
+void print(struct Stu* ps)
+{
+	// Method 1
+	printf("%s %d, %f\n", (*ps).name, (*ps).age, (*ps).score);
+	// Method 2
+	printf("%s %d, %f\n", ps->name, ps->age, ps->score);
+}
+
 
 // main() 函数，主函数：C语言的代码主体，程序运行开始（有且仅有1个 main()函数）
 int main() // 数据类型 main()
@@ -211,6 +232,47 @@ int main() // 数据类型 main()
 	printf("%d\n", d_m); // 15
 
 
+	// #define 定义宏
+	int a_a = 10;
+	int a_b = 5;
+
+	int a_c = Time(a_a, a_b + 5); // 调用宏
+	int a_d = MAX_Return(a_a, a_b);//调用宏
+
+	printf("%d\n", a_c);
+	printf("%d\n", a_d);
+
+	// 指针变量
+	int a_e = 10; // 4个字节
+	int* pa = &a_e; // pa是创建出来存放地址的指针变量
+
+	char a_f = 'w';
+	char* pc = &a_f;
+	// 内存 - 编号 = 地址 = 指针；指针就是地址，地址就是内存单元的编号
+	// int* , char* 整体是一个类型（整形指针类型）； 
+	// int char 说明的是pa指向的对象是int类型；*说明pa是指针变量
+	// 口头语的指针一般代表指针变量
+
+	*pa = 20; // * 是解引用操作符，*pa 就是通过pa中存放的地址，找到 pa 指向的空间
+	// 本质上是将 a 的值改为了20
+	printf("%d\n", a_e);
+
+
+	// 结构体：描述复杂对象
+	//创建变量
+	struct Stu s1 = { "名字", 20, 90.00 };
+	struct Stu s2 = { "名字", 22, 100.00 };
+	struct Stu s3 = { "",0,0 };
+
+	printf("%s %d %f\n", s1.name, s1.age, s1.score); // . 操作符 结构体变量 . 结构体成员
+
+	// 通过地址打印
+	print(&s2);
+
+	// 向结构体中输入变量
+	scanf(" %s %d %f", s3.name, &(s3.age), &(s3.score));
+	print(&s3);
+
 	// 返回0正常返回, 与起始数据类型一致`
 	return 0;
 }
@@ -230,6 +292,7 @@ int main() // 数据类型 main()
 2. %s 字符串
 3. %c 字符
 4. %f 浮点数
+5. %zu 10进制无符号的整数
 
 [操作符]
 1. /(除号)，左右两端至少要有一位是小数，否则执行的是整数除法
