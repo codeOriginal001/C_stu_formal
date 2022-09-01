@@ -555,6 +555,130 @@ int main()
 		}
 	}
 
+	// 打印100~200 之间的素数
+
+	int i10 = 0;
+	int j10 = 0;
+	int count = 0; // 计数
+
+	for (i10 = 100; i10 <= 200; i10++)
+	{
+		int flag = 1; // 代表是素数
+		for (j10 = 2; j10 < i10; j10++) //  // 判断 i 是否为素数：使用 2~i - 1之间的数除以 i
+		{
+			if (i % j10 == 0) // 一旦余 0 代表不是素数
+			{
+				flag = 0; //使承受量为 0
+				break; // 跳出内层循环，到下一个i
+			}
+		}
+		if (1 == flag) // 若都不是0，代表i是素数
+		{
+			count++;
+			printf("%d ", i10); // 输出i
+		}
+	}
+	printf("\ncount = %d", count);
+
+
+	//打印100~200 之间的素数 ： 
+	//优化1：如果i不是素数，那么2~开平方i一定有一个因子
+	//优化2：排除所有偶数
+	int i_i10 = 0;
+	int j_j10 = 0;
+	int count_c = 0; // 计数
+
+	for (i_i10 = 101; i_i10 <= 200; i_i10 += 2)
+	{
+		int flag = 1; // 代表是素数
+		for (j_j10 = 2; j_j10 <= sqrt(i_i10); j_j10++) // 判断 i 是否为素数：使用 2~i - 1之间的数除以 i 
+									  // sqrt() 库函数 #include <math.h>
+		{
+			if (i_i10 % j_j10 == 0) // 一旦余 0 代表不是素数
+			{
+				flag = 0; //使承受量为 0
+				break; // 跳出内层循环，到下一个i
+			}
+		}
+		if (1 == flag) // 若都不是0，代表i是素数
+		{
+			count_c++;
+			printf("%d ", i_i10); // 输出i
+		}
+	}
+	printf("\ncount = %d", count_c);
+
+
+
+	int year = 0;
+	int c = 0;
+
+	for (year = 1000; year <= 2000; year++)
+	{
+		if ((year % 4 == 0) && (year % 100 != 0))
+		{
+			c++;
+			printf("%d\t", year);
+		}
+
+		if (year % 400 == 0)
+		{
+			c++;
+			printf("%d\t", year);
+		}
+
+	}
+	printf("count = %d\n", c);
+
+
+
+
+	// 求最大公约数 -> 辗转相除
+
+	int m10 = 0;
+	int n10 = 0;
+	int r10 = 0;
+	scanf("%d %d", &m10, &n10);
+
+	while (r10 = m10 % n10)
+	{
+		m10 = n10;
+		n10 = r10;
+	}
+	printf("%d\n", n10);
+
+
+	// 九九乘法表
+
+	int i_i_i = 0;
+	int j_j_j = 0;
+
+	for (i_i_i = 1; i_i_i <= 9; i_i_i++)
+	{
+		for (j_j_j = 1; j_j_j <= i_i_i; j_j_j++)
+		{
+			printf("%d * %d = %2d\t", i_i_i, j_j_j, i_i_i * j_j_j);
+		}
+		printf("\n");
+	}
+
+	// 求最大值
+
+	int arr_arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+	int max_max = arr_arr[0];
+
+	int i_i_i_i = 0;
+
+	for (i_i_i_i = 1; i_i_i_i < 10; i_i_i_i++)
+	{
+		if (arr_arr[i_i_i_i] > max_max)
+		{
+			max_max = arr_arr[i_i_i_i];
+		}
+	}
+	printf("\n%d\n", max_max);
+
 
 	return 0;
 }
